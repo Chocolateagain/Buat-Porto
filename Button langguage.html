@@ -13,33 +13,31 @@
   <style>
     body {
       display: flex;
-      justify-content: left;
-      align-items: left;
+      justify-content: flex-start; /* Align to the left */
+      align-items: flex-start; /* Align to the top */
       height: 100vh;
       margin: 0;
       background-color: #f0f0f0;
       font-family: Arial, sans-serif;
+      padding: 10px; /* Add padding to avoid touching the edges */
     }
 
     .button {
       display: flex;
       align-items: center;
-      padding: 5px 10px; /* Smaller padding */
-      margin: 5px; /* Smaller margin */
+      padding: 5px 10px; /* Adjusted padding for smaller buttons */
+      margin: 5px; /* Reduced margin to bring buttons closer */
       border: 2px solid rgba(0, 0, 0, 0.5); /* Semi-transparent border */
       border-radius: 50px; /* Rounded corners */
       text-decoration: none;
       color: rgba(0, 0, 0, 0.7); /* Semi-transparent text color */
-      font-size: 10px; /* Smaller font size */
+      font-size: 12px; /* Smaller font size */
       background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
       transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-      width: 100px; /* Smaller width */
-      height: 15px; /* Smaller height */
-      justify-content: center; /* Center text and icon */
     }
 
     .button .material-icons {
-      font-size: 15px; /* Smaller icon size */
+      font-size: 12px; /* Smaller icon size */
       margin-right: 5px; /* Smaller margin between icon and text */
     }
 
@@ -54,7 +52,7 @@
 <body>
   <a href="https://pattern-lycra-aea.notion.site/bcbda51354cd417f95c2129abf1c30ed?pvs=4" class="button" target="_blank">
     <i class="material-icons">&#xe8e2;</i>
-    ENG
+    EN
   </a>
 
   <a href="https://pattern-lycra-aea.notion.site/Portfolio-ID-278fbbe575c64f47a63001a0aa445658?pvs=4" class="button" target="_blank">
