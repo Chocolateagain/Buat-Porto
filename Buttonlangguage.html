@@ -11,54 +11,74 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   
   <style>
-    body {
-      display: flex;
-      justify-content: flex-start; /* Align to the left */
-      align-items: flex-start; /* Align to the top */
-      height: 100vh;
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+      height: 100vh;
       background-color: #f0f0f0;
       font-family: Arial, sans-serif;
-      padding: 10px; /* Add padding to avoid touching the edges */
+    }
+
+    .wrapper {
+      display: inline-flex;
     }
 
     .button {
-      display: flex;
-      align-items: center;
-      padding: 5px 10px; /* Adjusted padding for smaller buttons */
-      margin: 5px; /* Reduced margin to bring buttons closer */
-      border: 2px solid rgba(0, 0, 0, 0.5); /* Semi-transparent border */
-      border-radius: 50px; /* Rounded corners */
+      background-color: #eae9e9;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      margin: 10px;
+      cursor: pointer;
       text-decoration: none;
-      color: rgba(0, 0, 0, 0.7); /* Semi-transparent text color */
-      font-size: 12px; /* Smaller font size */
-      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+      color: rgba(0, 0, 0, 0.7);
       transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+      font-size: 12px; /* Smaller font size */
     }
 
     .button .material-icons {
       font-size: 12px; /* Smaller icon size */
-      margin-right: 5px; /* Smaller margin between icon and text */
     }
 
     .button:hover {
-      background-color: rgba(0, 0, 0, 0.8); /* Darker transparent background on hover */
-      color: #fff; /* White text color on hover */
-      border-color: rgba(0, 0, 0, 0.8); /* Darker border color on hover */
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+    }
+
+    .button:hover {
+      background-color: #eae9e9; /* Default background color */
+    }
+
+    .button.en:hover {
+      background-color: #ffbd2f;
+    }
+
+    .button.id:hover {
+      background-color: #23c8c8;
     }
   </style>
 </head>
 
 <body>
-  <a href="https://pattern-lycra-aea.notion.site/bcbda51354cd417f95c2129abf1c30ed?pvs=4" class="button" target="_blank">
-    <i class="material-icons">&#xe8e2;</i>
-    EN
-  </a>
+  <div class="wrapper">
+    <a href="https://pattern-lycra-aea.notion.site/bcbda51354cd417f95c2129abf1c30ed?pvs=4" class="button en" target="_blank">
+      <i class="material-icons">&#xe8e2;</i>
+      EN
+    </a>
 
-  <a href="https://pattern-lycra-aea.notion.site/Portfolio-ID-278fbbe575c64f47a63001a0aa445658?pvs=4" class="button" target="_blank">
-    <i class="material-icons">&#xe8e2;</i>
-    ID
-  </a>
+    <a href="https://pattern-lycra-aea.notion.site/Portfolio-ID-278fbbe575c64f47a63001a0aa445658?pvs=4" class="button id" target="_blank">
+      <i class="material-icons">&#xe8e2;</i>
+      ID
+    </a>
+  </div>
 </body>
 
 </html>
