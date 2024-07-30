@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Custom Buttons</title>
-  
+
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   
@@ -27,34 +27,33 @@
 
     .wrapper {
       display: inline-flex;
+      padding-top: 10px;
     }
 
     .button {
       background-color: #eae9e9;
-      width: 55px;
-      height: 55px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      margin: 10px;
+      width: 80px; /* Adjusted width */
+      height: 40px; /* Adjusted height */
+      border-radius: 20px; /* Rounded corners for arch effect */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 5px; /* Adjusted margin */
       cursor: pointer;
       text-decoration: none;
       color: rgba(0, 0, 0, 0.7);
       transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-      font-size: 12px; /* Smaller font size */
+      font-size: 12px; /* Font size */
     }
 
     .button .material-icons {
-      font-size: 12px; /* Smaller icon size */
+      font-size: 12px; /* Icon size */
+      margin-right: 5px; /* Spacing between icon and text */
     }
 
     .button:hover {
       background-color: rgba(0, 0, 0, 0.8);
       color: #fff;
-    }
-
-    .button:hover {
-      background-color: #eae9e9; /* Default background color */
     }
 
     .button.en:hover {
