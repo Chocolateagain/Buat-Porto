@@ -1,11 +1,14 @@
 <!DOCTYPE html>
+
+<!-- Auther: Shorouk Abdelaziz  https://shorouk.dev -->
+
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Links</title>
+  <title>My Socials</title>
 
   <!-- Google Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -19,67 +22,131 @@
 
     body {
       display: grid;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f5f5f5;
+      place-items: center;
     }
 
-    .button-wrapper {
-      display: flex;
-      gap: 20px;
+    .wrapper {
+      padding-top: 10px;
+      display: inline-flex;
+
     }
 
-    .button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .social {
+      background-color: #eae9e9;
       width: 55px;
       height: 55px;
       border-radius: 50%;
-      background-color: #eae9e9;
-      cursor: pointer;
-      transition: background-color 0.3s, color 0.3s;
+      display: grid;
+      place-items: center;
     }
 
-    .button:hover {
-      color: #fff;
+    .icon {
+      font-size: 1.2em;
     }
 
-    .use-icon:hover {
+    .blog:hover {
       background-color: #ffbd2f;
     }
 
-    .con-icon:hover {
+    .email:hover {
       background-color: #23c8c8;
     }
 
-    .material-icons {
-      font-size: 1.5em;
+    .facebook:hover {
+      background-color: #4267B2;
+    }
+
+    .instagram:hover {
+      background: rgb(241, 102, 217);
+      background: radial-gradient(circle, rgba(241, 102, 217, 1) 10%, rgba(252, 176, 69, 1) 76%, rgba(253, 29, 29, 1) 100%);
+    }
+
+    .linkedin:hover {
+      background-color: #0e76a8;
+    }
+
+    .twitter:hover {
+      background-color: #26a7de;
+    }
+
+    .reddit:hover {
+      background-color: #ff4500;
+    }
+
+    .tiktok:hover {
+      background-color: #ff0050;
+    }
+
+    .youtube:hover {
+      background-color: #FF0000;
+    }
+
+    .pinterest:hover {
+      background-color: #c8232c;
+    }
+
+    .telegram:hover {
+      background-color: #2AABEE;
+    }
+
+    .social {
+      position: relative;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    .social:hover {
+      color: #fff;
     }
   </style>
 
 </head>
 
 <body>
-  <div class="button-wrapper">
-    <div class="button use-icon" onclick="navigateTo('use')">
-      <i class="material-icons">&#xe8e2;</i>
-    </div>
-    <div class="button con-icon" onclick="navigateTo('con')">
-      <i class="material-icons">&#xe8e2;</i>
-    </div>
-  </div>
 
-  <script>
-    function navigateTo(buttonType) {
-      const urls = {
-        use: "https://pattern-lycra-aea.notion.site/bcbda51354cd417f95c2129abf1c30ed?pvs=4",
-        con: "https://pattern-lycra-aea.notion.site/Portfolio-ID-278fbbe575c64f47a63001a0aa445658?pvs=4"
-      };
-      window.open(urls[buttonType], '_blank').focus();
-    }
-  </script>
-</body>
+  <body>
+
+    <div class="wrapper">
+
+     
+
+      <!-- Start pinterest Icon -->
+      <div id="pinterest" onclick="navigate(this.id)" class="social pinterest">
+        <span class="icon"><i class="material-icons">&#xe8e2;</i></span>
+      </div>
+      <!-- End pinterest Icon -->
+
+      <!-- Start telegram Icon -->
+      <div id="telegram" onclick="navigate(this.id)" class="social telegram">
+        <span class="icon telegram"><i class="material-icons">&#xe8e2;</i></i></span>
+      </div>
+      <!-- End telegram Icon -->
+
+    </div>
+
+
+
+
+    <script>
+      function navigate(id) {
+
+        //if you want the URL to open in the same window use '_parent'  instead of '_blank'
+
+        if (id === "blog")
+          window.open("https://blog.shorouk.dev", '_blank').focus(); //Add the url to your blog
+
+        
+        else if (id === "pinterest") {
+          window.open("https://pattern-lycra-aea.notion.site/bcbda51354cd417f95c2129abf1c30ed?pvs=4", '_blank').focus(); //Add the url to your pinterest account
+        }
+        else if (id === "telegram") {
+          window.open("https://pattern-lycra-aea.notion.site/Portfolio-ID-278fbbe575c64f47a63001a0aa445658?pvs=4", '_blank').focus(); //Add the url to your telegram account
+        }
+      }
+
+    </script>
+
+
+  </body>
 
 </html>
