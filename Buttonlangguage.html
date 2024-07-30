@@ -21,6 +21,7 @@
     body {
       display: grid;
       place-items: center;
+      min-height: 100vh;
     }
 
     .wrapper {
@@ -30,24 +31,29 @@
 
     .social {
       background-color: #eae9e9;
-      width: 80px; /* Width adjusted for square-like appearance */
-      height: 40px; /* Height adjusted for square-like appearance */
-      border-radius: 25px; /* Rounded corners */
+      width: auto;
+      max-width: 100px; /* Ensure the button doesn't exceed this width */
+      height: 30px; /* Adjusted height */
+      border-radius: 15px; /* Rounded corners */
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       margin: 10px;
+      padding: 0 5px; /* Added padding for text */
       transition: background-color 0.3s;
+      font-size: 12px; /* Ensure text is responsive */
     }
 
     .icon {
       font-size: 15px; /* Reduced icon size */
+      flex-shrink: 0; /* Prevent icon from shrinking */
     }
 
     .social span {
       margin-left: 5px;
-      font-size: 15px; /* Adjusted text size */
+      font-size: 12px; /* Smaller text size */
+      flex-shrink: 1; /* Allow text to shrink */
     }
 
     .pinterest:hover,
@@ -76,5 +82,18 @@
       <span class="icon"><i class="material-icons">&#xe8e2;</i></span>
       <span>ID</span>
     </div>
-    <!-- End Telegram
+    <!-- End Telegram Icon -->
+  </div>
 
+  <script>
+    function navigate(id) {
+      const urls = {
+        pinterest: "https://pattern-lycra-aea.notion.site/bcbda51354cd417f95c2129abf1c30ed?pvs=4",
+        telegram: "https://pattern-lycra-aea.notion.site/Portfolio-ID-278fbbe575c64f47a63001a0aa445658?pvs=4"
+      };
+      window.open(urls[id], '_blank').focus();
+    }
+  </script>
+</body>
+
+</html>
