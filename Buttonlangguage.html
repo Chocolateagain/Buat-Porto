@@ -29,34 +29,32 @@
     }
 
     .social {
-      background-color: #eae9e9;
-      width: 70px; /* Reduced width */
-      height: 25px; /* Reduced height */
-      border-radius: 12px; /* Rounded corners */
+      background-color: transparent; /* Transparent background */
+      width: 80px; /* Reduced width */
+      height: 30px; /* Reduced height */
+      border: 1px solid #cbcacf; /* Slight grey border */
+      border-radius: 15px; /* Rounded corners */
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       margin: 10px;
-      transition: background-color 0.3s;
+      transition: background-color 0.3s, color 0.3s; /* Transition for color change */
     }
 
     .icon {
-      font-size: 14px; /* Reduced icon size */
+      font-size: 15px; /* Reduced icon size */
     }
 
     .social span {
       margin-left: 5px;
-      font-size: 12px; /* Reduced text size */
+      font-size: 15px; /* Reduced text size */
     }
 
     .pinterest:hover,
     .telegram:hover {
       background-color: #cbcacf;
-    }
-
-    .social:hover {
-      color: #fff;
+      color: #fff; /* Change text and icon color to white on hover */
     }
   </style>
 
