@@ -6,6 +6,11 @@
     <title>Before and After Image Slider</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
         .container {
             position: relative;
             width: 100%;
@@ -15,18 +20,18 @@
         .image-container {
             position: relative;
             overflow: hidden;
+            max-width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
         }
-        .image-before {
-            display: block;
-            width: 100%;
-        }
-        .image-after {
+        .image-before, .image-after {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-size: cover;
+            object-fit: cover;
+        }
+        .image-after {
             clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
         }
         .slider {
@@ -52,9 +57,9 @@
         .slider-arrows {
             display: flex;
             flex-direction: row;
-            background-color: transparent;
-            padding: 0;
-            border-radius: 0;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 5px;
+            border-radius: 20px;
             z-index: 2;
         }
         .material-icons {
@@ -65,10 +70,11 @@
             position: absolute;
             bottom: 10px;
             padding: 5px 10px;
-            background-color: rgba(128, 128, 128, 0.7);
+            background-color: rgba(255, 255, 255, 0.7);
             color: black;
             font-family: Arial, sans-serif;
             font-size: 14px;
+            border-radius: 4px;
         }
         .label-before {
             left: 10px;
@@ -76,13 +82,18 @@
         .label-after {
             right: 10px;
         }
+        @media (max-width: 768px) {
+            .container {
+                max-width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="image-container">
-            <img src='https://drive.google.com/thumbnail?id=1zvzKEKlMg11u5nzTscMJmrkJA09QuF_2' alt="Before" class="image-before">
-            <div class="image-after" style="background-image: url('https://drive.google.com/thumbnail?id=1E3EeoR2rLE5RwqWrSqB5tzY1nTgYQIps');"></div>
+            <img src="https://drive.google.com/thumbnail?id=1zvzKEKlMg11u5nzTscMJmrkJA09QuF_2&sz=w2000" alt="Before" class="image-before">
+            <img src="https://drive.google.com/thumbnail?id=1E3EeoR2rLE5RwqWrSqB5tzY1nTgYQIps&sz=w2000" alt="After" class="image-after">
             <div class="slider" id="slider">
                 <div class="slider-line"></div>
                 <div class="slider-arrows">
